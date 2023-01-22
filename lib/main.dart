@@ -104,6 +104,9 @@ class _CastleBuildingAnimationState extends State<_CastleBuildingAnimation> {
     //TODO 今のとこアプリで使う予定ないけど先手だけを動かすこともできるみたい
     //TODO 成ることができない場所で成るなどの合法手ではない手も指せる
 
+    // ↓SFEN例
+    //  position sfen lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1 moves 2g2f 3c3d 7g7f 8b4b 3i4h 2b8h+ 7i8h 5a6b 5i6h 6b7b 6h7h 7b8b 9g9f 9c9d 2f2e 4a3b 8h7g 7a7b 6i6h 4b4a 4i3i 3a4b 2e2d 2c2d 2h2d P*2c 2d2c+ 3b2c B*3b 4a3a 3b2c+ R*2g P*2d 3a3c 2c4a 6a5a G*3b 5a4a 3b4a 2g2d+ 4a4b 2d2b 4b5a 3c3b S*4a 3b3a P*2d B*6b G*3b 3a3b 4a3b+ 2b3b R*5b 3b5b 5a5b 6b7a R*2b B*4d 2b2a+ R*2g 2d2c+ P*2h 3i3h 2g2e+ 2c2d 2e2f 2d2e G*2b 2a2b 4d2b 2e2f 2h2i+ R*4b 2b4d G*6b S*3c 4b3b+ 5c5d 6b7b 8b7b N*7e G*6b 5b6b 4d6b G*5b G*4b 5b6b 7a6b 3b3a G*4a 3a1a R*7a L*6f 7c7d 6f6c+ 7b8b 6c6b 7d7e 6b7a 8b7a S*7c 8a7c B*6c S*7b B*7d 7b6c 7d6c+ B*7b 1a4a 4b4a G*6b 7a8b 6c7b 8b9c B*8b 9c8d 7b7c 8d8e S*8f
+
     /*
     TODO --------SFENのmovesをshogiパッケージで動く形に変えるには---------
     ①先手なら☗、後手なら☖をつける
@@ -148,10 +151,6 @@ class _CastleBuildingAnimationState extends State<_CastleBuildingAnimation> {
 
     TODO --------ここまでSFENのmovesをshogiパッケージで動く形に変えるには---------
     */
-
-    // ↓SFEN例
- /*  position sfen lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1 moves 2g2f 3c3d 7g7f 8b4b 3i4h 2b8h+ 7i8h 5a6b 5i6h 6b7b 6h7h 7b8b 9g9f 9c9d 2f2e 4a3b 8h7g 7a7b 6i6h 4b4a 4i3i 3a4b 2e2d 2c2d 2h2d P*2c 2d2c+ 3b2c B*3b 4a3a 3b2c+ R*2g P*2d 3a3c 2c4a 6a5a G*3b 5a4a 3b4a 2g2d+ 4a4b 2d2b 4b5a 3c3b S*4a 3b3a P*2d B*6b G*3b 3a3b 4a3b+ 2b3b R*5b 3b5b 5a5b 6b7a R*2b B*4d 2b2a+ R*2g 2d2c+ P*2h 3i3h 2g2e+ 2c2d 2e2f 2d2e G*2b 2a2b 4d2b 2e2f 2h2i+ R*4b 2b4d G*6b S*3c 4b3b+ 5c5d 6b7b 8b7b N*7e G*6b 5b6b 4d6b G*5b G*4b 5b6b 7a6b 3b3a G*4a 3a1a R*7a L*6f 7c7d 6f6c+ 7b8b 6c6b 7d7e 6b7a 8b7a S*7c 8a7c B*6c S*7b B*7d 7b6c 7d6c+ B*7b 1a4a 4b4a G*6b 7a8b 6c7b 8b9c B*8b 9c8d 7b7c 8d8e S*8f
-*/
 
     moves = CustomNotationConverter().movesFromFile(game);
     gameBoard = ShogiUtils.initialBoard;
