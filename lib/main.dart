@@ -89,7 +89,7 @@ class _CastleBuildingAnimationState extends State<_CastleBuildingAnimation> {
 ''';*/
 
      final game = '''
-☗P27-26
+☗P27-26+
 ☖P83-84
 ☗P26-25
 ☖P84-85
@@ -120,7 +120,7 @@ class _CastleBuildingAnimationState extends State<_CastleBuildingAnimation> {
     飛  R
     角  B
     玉  K
-    と 成香 成桂 成銀 馬 龍など成っている形は+Pなど文字の前に+をつける
+    と 成香 成桂 成銀 馬 龍など成っている形は最後に+をつける（後述もしてる）
 
     ③横座標は同じなのでそのまま
     縦座標はアルファベット(SFEN)から数字(shogiパッケージ)にする
